@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { DemoComponentComponent } from './demo-component/demo-component.component';
-
+import { DashBoardComponent } from './dash-board/dash-board.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { TitleComponent } from './title/title.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DemoComponentComponent
+    DashBoardComponent,
+    SideBarComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor() {
+    console.log('appmodule');
+  }
+}
 

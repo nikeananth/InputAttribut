@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'VijayApp check response';
+  appStatus: boolean = false;
+  appList: any[] = [ {
+    'ID': '1',
+    'Name' : 'One'
+  },
+    {
+      'ID': '2',
+      'Name' : 'Two'
+    } ];
+  constructor() {
+      console.log('hii');
+    }
+
+
 }
