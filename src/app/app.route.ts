@@ -3,6 +3,7 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
 import { UserComponent } from './user/user.component';
 
 export const ROUTES: Routes = [
-  { path: '',      component: DashBoardComponent },
-  { path: 'user',  component: UserComponent },
+  // { path: 'user',      component: DashBoardComponent },
+  { path: '',  component: UserComponent },
+  { path: '**',  component: UserComponent },
 ];
