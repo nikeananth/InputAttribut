@@ -17,9 +17,9 @@ import { ROUTES } from './app.route';
     UserComponent
   ],
   imports: [
-    BrowserModule,
+   BrowserModule,
     RouterModule.forRoot(ROUTES),
-    DashBoardModule
+   // DashBoardModule,
   ],
   providers: [],
   bootstrap: [AppComponent ]

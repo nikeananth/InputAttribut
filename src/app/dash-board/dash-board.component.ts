@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {  MOCK_DASH } from './shared/dash-mock';
 import {  DashBoard } from './shared/dash-board';
+import { DashService } from '../common/Dash.Service'
 
 
 @Component({
@@ -11,12 +11,12 @@ import {  DashBoard } from './shared/dash-board';
 export class DashBoardComponent implements OnInit {
 
   dashboardList: DashBoard [];
-  constructor() {
+  constructor(private dashService: DashService) {
     console.log('dashcomponent');
   }
 
   ngOnInit() {
-    this.dashboardList = MOCK_DASH;
+    this.dashboardList = this.dashService.getDashData();
   }
 
 }
