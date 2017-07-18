@@ -1,15 +1,16 @@
 <div id="page-wrapper">
 <table>
 
-  <tr *ngFor="let dashboard of dashboardList">
+  <tr *ngFor="let dashboard of dashboardList"  (click)='setDashDetails(dashboard);'>
 
     <td>{{dashboard.age}}</td>
     <td>{{dashboard.name}}</td>
+    <td><a routerLink="/user">user</a></td>
   </tr>
 </table>
 
 
-
+  <app-dash-details [selectedDashBoard] ='selectedDashBoard'></app-dash-details>
 
   <div class="container-fluid">
 

@@ -3,8 +3,8 @@ import { Routes } from '@angular/router';
 import { UserComponent } from './user/user.component';
 
 export const ROUTES: Routes = [
-  // { path: 'user',      component: DashBoardComponent },
+
   {path: 'dash', loadChildren: 'app/dash-board/dash-board.module#DashBoardModule'},
   { path: '',  component: UserComponent },
-  { path: '**',  component: UserComponent },
+  // { path: '**',  component: UserComponent },
 ];

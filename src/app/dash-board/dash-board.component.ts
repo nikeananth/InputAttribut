@@ -11,12 +11,18 @@ import { DashService } from '../common/Dash.Service'
 export class DashBoardComponent implements OnInit {
 
   dashboardList: DashBoard [];
+  selectedDashBoard: DashBoard;
+
   constructor(private dashService: DashService) {
     console.log('dashcomponent');
   }
 
   ngOnInit() {
     this.dashboardList = this.dashService.getDashData();
+  }
+
+  setDashDetails(dashBoard: DashBoard){
+this.selectedDashBoard = dashBoard;
   }
 
 }
